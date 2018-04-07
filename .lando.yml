@@ -1,0 +1,28 @@
+##
+# package     Devops with Lando and Docker, by Anibal Sanchez @anibal_sanchez - Ubucon Europe 2018
+# subpackage  Lando
+#
+# author      Extly, CB.
+# copyright   Copyright (C) 2018 Extly, CB. All rights reserved.
+# license     https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
+# link        https://extly.tech
+##
+
+name: devops-with-lando-and-docker
+
+proxy:
+  appserver:
+    - devops-with-lando-and-docker.lndo.site
+    - mars.extly.com
+
+services:
+  appserver:
+    type: php:7.1
+    via: apache
+    ssl: true
+    webroot: .
+    overrides:
+      services:
+        # A nice local site http://localhost:8080
+        ports: ['8080:80']
+
