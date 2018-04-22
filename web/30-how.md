@@ -205,7 +205,9 @@ Intro to Containers, Docker, Docker Compose
     recipe: lamp
 
 
-## First Recipe as Lando's docker-compose.yml <!-- .slide: class="extly-slide-style plain console" -->
+## First Recipe - Internals <!-- .slide: class="extly-slide-style plain console" -->
+
+<!-- .element: class="small" --> **Hidden docker-compose.yml**: ~/.lando/compose/mysite/mysite-1.yml
 
     version: '3.2'
     services:
@@ -325,3 +327,91 @@ Intro to Containers, Docker, Docker Compose
       appserver: {}
       data_database: {}
     networks: {}
+
+
+## Useful snippets - Proxy route <!-- .slide: class="extly-slide-style plain console" -->
+
+    proxy:
+      html:
+        - mysite.lndo.site
+
+
+## Useful snippets - localhost:8080 <!-- .slide: class="extly-slide-style plain console" -->
+
+    overrides:
+      services:
+        ports:
+          # A nice local site http://localhost:8080
+          - '8080:80
+
+
+## Useful snippets - Testing MySQL 8 <!-- .slide: class="extly-slide-style plain console" -->
+
+    database:
+      type: mysql
+      overrides:
+        services:
+          image: 'mysql:8'
+
+
+## Useful snippets - Load a custom php.ini <!-- .slide: class="extly-slide-style plain console" -->
+
+    services:
+      appserver:
+        config:
+          conf: config/php.ini
+
+
+## Useful services
+
+    pma:
+      type: phpmyadmin
+
+    mailhog:
+      type: mailhog
+
+
+## Flexible Tooling - Joomla
+
+    tooling:
+      mysql:
+        user: root
+        service: database
+        description: Drop into a MySQL shell
+
+      j-install:
+        service: appserver
+        description: "Command to install Joomla."
+        cmd: echo Installing Joomla ...
+
+      j-dev:
+        service: appserver
+        description: "Apply my default configuration for JDevelopment"
+        cmd: echo Configuring my defaults in configuration.php for JDevelopment…
+
+    events:
+      post-j-install:
+        - appserver: curl -L https://downloads.joomla.org/cms/joomla3/3-8-6/Joomla_3-8-7-Stable-Full_Package.tar.gz | tar zxv -C $LANDO_WEBROOT
+
+      post-j-dev:
+          - appserver: test -e $LANDO_MOUNT/www/configuration.php && sh $LANDO_MOUNT/config/j-dev.sh
+
+
+## Flexible Tooling - WordPress
+
+    tooling:
+      wp-install:
+        service: appserver
+        description: "Command to install WordPress."
+        cmd: echo Installing WordPress ...
+
+    events:
+      post-wp-install:
+      ## Download WordPress
+      - appserver: cd $LANDO_WEBROOT; wp core download
+      ## Configure it
+      - appserver: cd $LANDO_WEBROOT; wp core config --dbname=wp_tpldb --dbuser=wp_tpldb --dbpass=wp_tpldb --dbhost=database --dbprefix=wp_
+      ## Install it
+      - appserver: cd $LANDO_WEBROOT; wp core install --url="http://localhost:8080" --title="Blog Title" --admin_user="admin" --admin_password="admin" --admin_email="anibal.sanchez@extly.com"
+      ## Install Gutenberg plugin
+      - appserver: cd $LANDO_WEBROOT; wp plugin install gutenberg --activate
