@@ -11,18 +11,21 @@
 name: devops-with-lando-and-docker
 
 proxy:
-  appserver:
+  html:
+    # Give me http://devops-with-lando-and-docker.lndo.site and https://devops-with-lando-and-docker.lndo.site
     - devops-with-lando-and-docker.lndo.site
-    - mars.extly.com
 
 services:
-  appserver:
-    type: php:7.1
-    via: apache
-    ssl: true
-    webroot: .
+  html:
+    # Use the latest version of apache.
+    type: apache:2.2
+
+    # Optionally specify a webroot if it is a subdirectory of the appRoot
+    webroot: web
+
     overrides:
       services:
-        # A nice local site http://localhost:8080
-        ports: ['8080:80']
+        ports:
+          # A nice local site http://localhost:8080
+          - '8080:80'
 

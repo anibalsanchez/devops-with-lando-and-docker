@@ -1,9 +1,10 @@
 /**
- * Solarized Dark theme for reveal.js.
- * Author: Achim Staebler
+ * devops-with-lando-and-docker theme for reveal.js.
+ * Author: Anibal Sanchez, Extly Tech.
  */
 @import url(../../lib/font/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
 /**
  * Solarized colors by Ethan Schoonover
  */
@@ -278,3 +279,28 @@ body {
 .reveal .extly-slide-style h3, .reveal .extly-slide-style h4,
 .reveal .extly-slide-style h5, .reveal .extly-slide-style h6 {
   color: #fff; }
+
+.reveal li.small, .reveal p.small {
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top;
+}
+
+.reveal .console {
+  background-color: black;
+  color: #00CC00;
+  font-family: 'Roboto Mono', monospace;
+  text-align: left;
+}
+
+.reveal .console code {
+  background-color: black;
+  color: #00CC00;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+.reveal .console p {
+  margin: 0 20%;
+}

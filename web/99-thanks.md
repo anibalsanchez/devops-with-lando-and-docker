@@ -1,5 +1,10 @@
 # What is Lando?
 
+- Lando - DrupalCon Nashville 2018 Lando + Platform.sh
+https://docs.google.com/presentation/d/1K3hRKZN6wvgYUgjWoaDJfXZeo3K_UJPKCDi6duDY-NU/edit#slide=id.p
+
+- Lando - MidCamp 2018 Lando + DevOps Training
+https://docs.google.com/presentation/d/1UQ7jwOs85jMOlQmSzN_DdQU0MLlc5Vkqkb34daOP6KA/edit#slide=id.p
 
 
 ## External 1.1
