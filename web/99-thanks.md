@@ -1,54 +1,22 @@
-# What is Lando?
+# Conclusion
 
-- Lando - DrupalCon Nashville 2018 Lando + Platform.sh
-https://docs.google.com/presentation/d/1K3hRKZN6wvgYUgjWoaDJfXZeo3K_UJPKCDi6duDY-NU/edit#slide=id.p
+The path is the goal.
 
-- Lando - MidCamp 2018 Lando + DevOps Training
-https://docs.google.com/presentation/d/1UQ7jwOs85jMOlQmSzN_DdQU0MLlc5Vkqkb34daOP6KA/edit#slide=id.p
+![alt](images/99-thanks/light-863150_640.jpg)<!-- .element: style="width: 40%" -->
 
 
-## External 1.1
+## Acknowledgements
 
-Content 1.1
+This presentation is based on:
 
-Note: This will only appear in the speaker notes window.
+- [DrupalCon Nashville 2018 Lando + Platform.sh](https://docs.google.com/presentation/d/1K3hRKZN6wvgYUgjWoaDJfXZeo3K_UJPKCDi6duDY-NU/edit#slide=id.p)
+- [MidCamp 2018 Lando + DevOps Training](https://docs.google.com/presentation/d/1UQ7jwOs85jMOlQmSzN_DdQU0MLlc5Vkqkb34daOP6KA/edit#slide=id.p)
 
+<!-- .element: class="small" -->Lando's a free, open source, cross-platform, local development environment and DevOps tool built on Docker container technology and developed by [Tandem](http://thinktandem.io/).
 
-## External 1.2
-
-Content 1.2
-
-
-
-## External 2
-
-Content 2.1
-
-
-
-## External 3.1
-
-Content 3.1
-
-
-## External 3.2
-
-Content 3.2
-
-
-## External 3.3
-
-![External Image](https://s3.amazonaws.com/static.slid.es/logo/v2/slides-symbol-512x512.png)
-
-
-    # These are v3 docker compose file overrides. They allow you to provide very
-    # precise fine tuning to your app
-    # See: https://docs.docker.com/compose/compose-file/
-
-
-
-    overrides:
-      services:
-        ports: ['8080:80']
-        # image: pirog/myapache:2
-        # build: .
+- <!-- .element: class="small" -->Website: <https://devwithlando.io>
+- <!-- .element: class="small" -->Github: <https://github.com/lando/lando>
+- <!-- .element: class="small" -->Docs: <https://docs.devwithlando.io>
+- <!-- .element: class="small" -->Slack Channel: <https://slackpass.io/kalabox>
+- <!-- .element: class="small" -->Support: <https://slackpass.io/kalabox>
+- <!-- .element: class="small" -->Pure Inspiration: <https://goo.gl/wW4WNR>
