@@ -248,11 +248,21 @@ Let's start with the development of the code base
 ![Lando Calrissian](images/10-what/lando-calrissian.jpg)
 
 
+## Lando is a CLI for devs  <!-- .slide: class="extly-slide-style plain" data-background-repeat="no-repeat" data-background-image="images/10-what/lando-seal.png" data-background-size="15%" data-background-position="95% 5%" -->
+
+    anibal@local-server:~/$ lando start
+
+- Quickly &amp; painlessly spin up the services
+- Local development environment
+- DevOps tool built on Docker containers
+- It's a free, open source, and cross-platform
+
+
 ## A developer should be able to <!-- .slide: class="extly-slide-style plain" data-background-repeat="no-repeat" data-background-image="images/10-what/lando-seal.png" data-background-size="15%" data-background-position="95% 5%" -->
 
 <!-- .element: class="small" --> Get a running site and the tools needed to develop with:
 
-- a single, short config file called `.lando.yml` and,
+- a **single**, **short** config file called `.lando.yml` and,
 - a few `lando` commands.
 
 
@@ -261,14 +271,6 @@ Let's start with the development of the code base
 - git clone
 - **lando start**
 - ... and get EVERYTHING they need to develop
-
-
-## Lando is for devs  <!-- .slide: class="extly-slide-style plain" data-background-repeat="no-repeat" data-background-image="images/10-what/lando-seal.png" data-background-size="15%" data-background-position="95% 5%" -->
-
-- Quickly &amp; painlessly spin up the services
-- Local development environment
-- DevOps tool built on Docker containers
-- It's a free, open source, and cross-platform
 
 
 ## First Recipe <!-- .slide: class="extly-slide-style plain console" -->

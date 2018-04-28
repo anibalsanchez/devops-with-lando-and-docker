@@ -19,4 +19,3 @@ This presentation is based on:
 - <!-- .element: class="small" -->Docs: <https://docs.devwithlando.io>
 - <!-- .element: class="small" -->Slack Channel: <https://slackpass.io/kalabox>
 - <!-- .element: class="small" -->Support: <https://slackpass.io/kalabox>
-- <!-- .element: class="small" -->Pure Inspiration: <https://goo.gl/wW4WNR>

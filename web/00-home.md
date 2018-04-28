@@ -4,11 +4,14 @@
 
 <!-- .element: class="small" --> Ubucon Europe - Xixón, Spain - 27-29th of April 2018
 
+<!-- .element: class="small" --> Slides: [joo.nu/devops](http://joo.nu/devops)
+
 
 ## In this workshop
 
 - What is DevOps?
 - We need Containers
-- Mimic locally production environments
-- Customize or extend tooling
-- Deployment options
+- Docker, DockerCompose and Lando
+- Recipes and Services
+- Routes, Tooling and Events
+- Conclusion

@@ -55,7 +55,7 @@ Flexible tooling for Joomla.
         description: "Apply my default configuration for JDevelopment"
         cmd: echo Configuring my defaults in configuration.php for JDevelopment…
 
-      j-jpa:
+      j-restore:
         service: appserver
         description: "Restore an Akeeba .jpa backup"
         cmd: echo Restoring Akeeba .jpa backup …
@@ -67,7 +67,7 @@ Flexible tooling for Joomla.
       post-j-dev:
           - appserver: test -e $LANDO_MOUNT/www/configuration.php && sh $LANDO_MOUNT/config/j-dev.sh
 
-      post-j-jpa:
+      post-j-restore:
         - appserver: cd $LANDO_WEBROOT; wget -O kickstart.zip https://www.akeebabackup.com/download/akeeba-kickstart/5-4-2/kickstart-core-5-4-2-zip.zip
         - appserver: cd $LANDO_WEBROOT; unzip kickstart.zip kickstart.php
         - appserver: cd $LANDO_WEBROOT; php kickstart.php *.jpa
