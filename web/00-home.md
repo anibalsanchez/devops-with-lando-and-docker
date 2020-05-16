@@ -4,7 +4,7 @@
 
 <!-- .element: class="small" --> Ubucon Europe - Xixón, Spain - 27-29th of April 2018
 
-<!-- .element: class="small" --> Slides: [joo.nu/devops](http://joo.nu/devops)
+<!-- .element: class="small" --> Slides: [ppub.link/devops](http://ppub.link/devops)
 
 
 ## In this workshop
